@@ -12,7 +12,8 @@ class AdminContactController extends Controller
      */
     public function index()
     {
-        return view('admin_contact.index');
+        $contacts = Contact::all();
+        return view('admin_contact.index', compact('contacts'));
     }
 
     /**
@@ -58,7 +59,7 @@ class AdminContactController extends Controller
 
     public function create()
     {
-
+        return view('admin_contact.create');
     }
 
     public function edit(string $id)

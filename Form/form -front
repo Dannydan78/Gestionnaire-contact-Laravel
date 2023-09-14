@@ -1,0 +1,42 @@
+div class="text-center">
+    <div class="mx-auto max-w-md mt-4">
+        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="Nom">
+                    Nom
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="Nom" type="text" placeholder="Nom">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="Prenom">
+                    Prénom
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="Prenom" type="text" placeholder="Prenom">
+            </div>
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="Adresse postale">
+                Adresse Postale
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="Adresse postale" type="text" placeholder="Adresse postale">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="Email">
+                Email
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="Email" type="text" placeholder="Email">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="Numero de telephone">
+                Numero de téléphone
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="Numero de telephone" type="text" placeholder="Numero de telephone">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="Date de naissance">
+                Date de naissance
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="Date de naissance" type="text" placeholder="Date de naissance">
+            <div class="mb-6">
+            <div class="flex items-center justify-between">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-4" type="button">
+                    Enregistrer
+                </button>
+
+            </div>
+        </form>
+
+    </div>
+</div>

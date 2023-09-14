@@ -12,7 +12,7 @@ class Contact extends Model
         'Nom',
         'Prenom',
         'Adresse postale',
-        'Adresse email',
+        'Email',
         'Numero de telephone',
         'Date de naissance'
 
