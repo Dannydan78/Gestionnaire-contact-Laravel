@@ -21,13 +21,18 @@ class AdminContactController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request);
         $request->validate([
             'Nom' => 'required|max:255',
             'Prenom' => 'required',
-            'Adresse postale' => 'required',
-            'Adresse email' => 'required',
-            'Numero de telephone'
-          ]);
+            'Adresse_postale' => 'required',
+            'Email' => 'required',
+            'Numero_de_telephone' => 'required',
+            'Date_de_naissance' => 'required',
+
+        ]);
+
+
           Contact::create($request->all());
           return redirect()->route('admin_contact.index')
             ->with('success','Le contact a bien été créé');
@@ -38,7 +43,8 @@ class AdminContactController extends Controller
      */
     public function show(string $id)
     {
-
+        $contact = Contact::find($id);
+        return view('admin_contact.show', compact('contact'));
     }
 
     /**
@@ -60,6 +66,7 @@ class AdminContactController extends Controller
     public function create()
     {
         return view('admin_contact.create');
+
     }
 
     public function edit(string $id)

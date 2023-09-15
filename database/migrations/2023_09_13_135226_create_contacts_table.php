@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('Nom');
             $table->string('Prenom');
-            $table->string('Adresse Postale');
+            $table->string('Adresse_Postale');
             $table->string('Email');
-            $table->string('Numero de telephone');
-            $table->date('Date de naissance');
+            $table->string('Numero_de_telephone');
+            $table->date('Date_de_naissance');
             $table->timestamps();
         });
     }

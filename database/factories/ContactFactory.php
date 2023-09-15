@@ -19,10 +19,11 @@ class ContactFactory extends Factory
         return [
             'Nom' => fake()->lastName(),
             'Prenom' => fake()->firstNameMale(),
-            'Adresse postale' => fake()->streetAddress(),
-            'Numero de telephone' => fake()->phoneNumber(),
-            'Date de naissance' => fake()->dateTime(),
-            'email' => fake()->unique()->safeEmail(),
+            'Adresse_postale' => fake()->streetAddress(),
+            'Numero_de_telephone' => fake()->phoneNumber(),
+            'Date_de_naissance' => fake()->dateTime(),
+            'Email' => fake()->unique()->safeEmail(),
+
 
         ];
     }

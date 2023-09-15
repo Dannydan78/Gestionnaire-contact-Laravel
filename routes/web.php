@@ -33,11 +33,11 @@ Route::get('admin/contact/create', AdminContactController::class . '@create')->n
 
 Route::get('admin/contact/edit/{id}', AdminContactController::class . '@edit')->name('admin.edit');
 
-Route::post('/admin/contact', PostController::class .'@store')->name('admin.store');
+Route::post('/admin/contact', AdminContactController::class .'@store')->name('admin.store');
 
-Route::put('/admin/contact/{id}', PostController::class .'@update')->name('admin.update');
+Route::put('/admin/contact/{id}', AdminContactController::class .'@update')->name('admin.update');
 
-Route::delete('/admin/contact/{id}', PostController::class .'@destroy')->name('admin.destroy');
+Route::delete('/admin/contact/{id}', AdminContactController::class .'@destroy')->name('admin.destroy');
 
 
 

@@ -15,37 +15,48 @@
 </head>
 
 <body>
-    <body>
-        <div class="container mx-auto mt-8 flex">
+
+        <div class="container mx-auto mt-8">
 
             @extends('sidebar')
 
 
-            <div class="mx-auto">
-                <form>
-                    <form>
-                        <div class="mb-6">
-                          <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-                          <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com" required>
-                        </div>
-                        <div class="mb-6">
-                          <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
-                          <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
-                        </div>
-                        <div class="flex items-start mb-6">
-                          <div class="flex items-center h-5">
-                            <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required>
-                          </div>
-                          <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
-                        </div>
-                        <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
-                      </form>
-                    <!-- Votre formulaire ici -->
-                </form>
+
+            <div class="mx-auto w-96">
+                <h1 class="text-3xl">Ajouter contact</h1>
+                <form class="mt-10 p-5 border" action="{{ route('admin.store') }}" method="POST">
+                    @csrf
+                    <label for="Nom" class="block mb-2 text-sm font-medium text-gray-900 dark:text-dark">Nom</label>
+                    <input type="text" id="Nom" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-00 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500" name="Nom" placeholder="" required>
+
+                    <label for="Prenom" class="mt-2 block mb-2 text-sm font-medium text-gray-900 dark:text-dark">Prénom</label>
+                    <input type="text" id="Prenom" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-00 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500" name="Prenom" placeholder="" required>
+
+                    <label for="Adresse_Postale" class="mt-2 block mb-2 text-sm font-medium text-gray-900 dark:text-dark">Adresse</label>
+                    <input type="text" id="Adresse Postale" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-00 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500" name="Adresse_postale" placeholder="" required>
+
+                    <label for="email" class="mt-2 block mb-2 text-sm font-medium text-gray-900 dark:text-dark">Email</label>
+                    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-00 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500" name="Email" placeholder="" required>
+
+                    <label for="Numero_de_telephone" class="mt-2 block mb-2 text-sm font-medium text-gray-900 dark:text-dark">Numéro de téléphone</label>
+                    <input type="tel" id="Numero de telephone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-00 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500" name="Numero_de_telephone" placeholder="" required>
+
+                    <label for="Date_de_naissance" class="mt-2 block mb-2 text-sm font-medium text-gray-900 dark:text-dark">Date de naissance</label>
+                    <input type="date" id="Date de naissance" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-00 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500" name="Date_de_naissance" placeholder="" required>
+
+                    <button type="submit" class="mt-5 focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Enregistrer</button>
+                </div>
+
+                 <div class="text-center mt-4">
+                    <a href="{{ route('admin.contact.index') }}" class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Retour à la liste</a>
+                </div>
             </div>
         </div>
+
     </body>
 
+
+    <button type="button" class="mt-3 text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"><a href="{{ route('admin.create') }}">Ajouter un nouveau contact</a></button>
 
 
 
