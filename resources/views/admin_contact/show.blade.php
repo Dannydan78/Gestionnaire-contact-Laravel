@@ -49,7 +49,21 @@
                                 <td class="px-6 py-4">{{ $contact->Email }}</td>
                     </thead>
                     </table>
-                    <a href="{{ route('admin.destroy', ['id' =>$contact->id  ]) }}"></a>
+                    <div class="mt-10">
+                        <a href="{{ route('admin.edit', ['id' => $contact->id]) }}">
+                        <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Modifier</button></a>
+                    </div>
+
+                    <div class="mt-3">
+                        <form class="cursor-default"
+                        action="{{ route('admin.destroy', ['id' => $contact->id]) }}"
+                        method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Supprimer</button>
+                    </div>
+
+                </div>
                 </div>
             </div>
         </div>

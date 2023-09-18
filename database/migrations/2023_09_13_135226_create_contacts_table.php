@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('Prenom');
             $table->string('Adresse_Postale');
             $table->string('Email');
+            $table->boolean('isAdmin')->default(false);
             $table->string('Numero_de_telephone');
             $table->date('Date_de_naissance');
             $table->timestamps();
