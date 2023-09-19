@@ -14,9 +14,10 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+//==================================== Front =================================================//
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 
@@ -38,6 +39,9 @@ Route::post('/admin/contact', AdminContactController::class .'@store')->name('ad
 Route::put('/admin/contact/{id}', AdminContactController::class .'@update')->name('admin.update');
 
 Route::delete('/admin/contact/{id}', AdminContactController::class .'@destroy')->name('admin.destroy');
+
+
+
 
 
 

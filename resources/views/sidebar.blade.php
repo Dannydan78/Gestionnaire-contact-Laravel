@@ -1,4 +1,4 @@
-
+<div style="position: fixed; top: 0; left: 0; height: 100%; width: 300px; background-color: #333;">
 <span class="absolute text-white text-4xl top-5 left-4 cursor-pointer" onclick="Openbar()">
     <i class="bi bi-filter-left px-2 bg-gray-900 rounded-md"></i>
   </span>
@@ -68,5 +68,7 @@
       document.querySelector('.sidebar').classList.toggle('left-[-300px]')
     }
   </script>
+
+</div>
 
 
