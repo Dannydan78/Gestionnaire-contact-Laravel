@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminContactController;
 use App\Http\Controllers\AdminHomeController;
+use App\Http\Controllers\FrontHomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,9 +17,12 @@ use Illuminate\Support\Facades\Route;
 */
 //==================================== Front =================================================//
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', FrontHomeController::class . '@index')->name('home.index');
+
+Route::get('contact/{id}', [FrontHomeController::class, 'showContact'])->name('front.contact.show');
+
+
+// Route::get('home/show/{id}', AdminContactController::class . '@show')->name('home.show');
 
 
 //================================== Admin =============================================//

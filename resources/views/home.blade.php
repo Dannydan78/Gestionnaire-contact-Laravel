@@ -12,6 +12,8 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <!-- Styles -->
     <style>
         /* ! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com */
@@ -829,16 +831,19 @@
             }
         }
     </style>
+
 </head>
+
+
 
 <body class="flex flex-col min-h-screen">
     @include('front-navbar')
 
     <div class="flex-grow">
         <div class="flex justify-center mt-20">
-            <div class="container mx-2">
+            <div class="container mx-5 justify-center items-center ">
 
-                <div class=" p-4  rounded justify-center items-center text-center">
+                <div class=" p-4 ms-10 rounded  text-center">
                     @include('card')
                 </div>
             </div>
@@ -857,21 +862,29 @@
                     praesentium iste doloribus?Aut incidunt mollitia quia est explicabo animi nemo officiis. Error totam
                     harum sint! Possimus hic accusantium mollitia esse perferendis quaerat rerum temporibus cum aliquid,
                     veniam sit a, quam consectetur facilis.</p>
-                <div class="mt-5 p-4 flex space-x-20">
+                <div class="mt-5 p-4 justify-center items-center flex space-x-20">
                     <div>@include('svg.phone')</div>
                     <div class="mt-2">@include('svg.house')</div>
                     <div>@include('svg.email')</div>
-                    <div></div>
+                    <div>@include('svg.user')</div>
                     <div></div>
 
                 </div>
             </div>
         </div>
-    </div>
 
-    <footer class="bg-gray-900 text-white p-4">
-        @include('front-footer')
-    </footer>
+        <div id="app">
+            <test-component></test-component>
+        </div>
+
+
+
+<footer class="bg-gray-900 text-white p-4 bottom-0 w-full fixed">
+    @include('front-footer')
+</footer>
+
+<script src="{{ mix('js/app.js') }}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 
 </html>

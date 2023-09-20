@@ -61,7 +61,7 @@
                                     Email</th>
                                 <th scope="col"
                                     class="px-6 py-3 bg-gray-100 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    
+
                                 </th>
                                 <th scope="col"
                                     class="px-6 py-3 bg-gray-100 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -99,7 +99,7 @@
                                             <button type="submit">
                                                 <x-heroicon-o-trash class="h-7 w-7 text-red-600" />
                                             </button>
-
+                                        </form>
                                     <td>
                                         <a href="{{ route('admin.edit', ['id' => $contact->id]) }}">
                                             <x-heroicon-o-pencil class="h-7 w-7 text-blue-600" />

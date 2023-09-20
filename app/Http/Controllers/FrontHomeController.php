@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use Illuminate\Http\Request;
 
 class FrontHomeController extends Controller
@@ -11,7 +12,22 @@ class FrontHomeController extends Controller
      */
     public function index()
     {
+        $contacts = Contact::all();
         return view('home', compact('contacts'));
+      
+    }
+
+    public function showContact(string $id)
+    {
+
+        // dd($id);
+        $contact = Contact::find($id);
+
+        if (!$contact) {
+
+        }
+
+        return view('contact', compact('contact'));
     }
 
     /**
@@ -35,7 +51,8 @@ class FrontHomeController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $contact = Contact::find($id);
+        return view('home', compact('contact'));
     }
 
     /**
