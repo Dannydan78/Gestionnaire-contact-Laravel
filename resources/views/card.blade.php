@@ -1,108 +1,60 @@
+@foreach ($contacts as $contact )
 
-<div class="w-full max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-blue-300 dark:border-gray-700">
-    <div class="flex items-center justify-between mb-4">
-        <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Latest Customers</h5>
-        <a href="#" class="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
-            View all
-        </a>
-   </div>
-   <div class="flow-root">
-        <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
-            <li class="py-3 sm:py-4">
-                <div class="flex items-center space-x-4">
-                    <div class="flex-shrink-0">
-                        <img class="w-8 h-8 rounded-full" src="{{ asset('images/business-dashboard-example.png')}}" alt="Neil image">
-                    </div>
-                    <div class="flex-1 min-w-0">
-                        <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-10">
 
-                            kk
-                        </p>
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-500 dark:bg-blue-100 dark:text-gray-00">
+            <tr>
 
-                        <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                <th scope="col" class="px-6 py-3">
+                    Nom & Prénom :
+                </th>
 
-                        </p>
-                     
-                    </div>
+                <th scope="col" class="px-6 py-3">
+                    Adresse :
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Telephone :
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Date de naissance :
+                </th>
 
-                    <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                        5555
-                    </div>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-blue-200 dark:border-gray-700 dark:bg-gray-700 p-8">
 
-                </div>
-            </li>
-            <li class="py-3 sm:py-4">
-                <div class="flex items-center space-x-4">
-                    <div class="flex-shrink-0">
-                        <img class="w-8 h-8 rounded-full" src="" alt="Bonnie image">
-                    </div>
-                    <div class="flex-1 min-w-0">
-                        <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
 
-                        </p>
-                        <p class="text-sm text-gray-500 truncate dark:text-gray-400">
-                            email@windster.com
-                        </p>
+                <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                    <img class="w-10 h-10 rounded-full" src="/images/floyd.webp" alt="">
+                    <div class="pl-3">
+                        <div class="text-base font-semibold">{{ $contact->Nom }}  {{$contact->Prenom}}</div>
+                        <div> </div>
+                        <div class="font-normal text-gray-500">{{ $contact->Email}}</div>
                     </div>
-                    <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                        $3467
+                </th>
+                <td class="px-6 py-4">
+                    {{ $contact->Adresse_Postale }}
+                </td>
+                <td class="px-6 py-4">
+                    <div class="flex items-center">
+                        {{ $contact->Numero_de_telephone }}
                     </div>
-                </div>
-            </li>
-            <li class="py-3 sm:py-4">
-                <div class="flex items-center space-x-4">
-                    <div class="flex-shrink-0">
-                        <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-2.jpg" alt="Michael image">
-                    </div>
-                    <div class="flex-1 min-w-0">
-                        <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                            Michael Gough
-                        </p>
-                        <p class="text-sm text-gray-500 truncate dark:text-gray-400">
-                            email@windster.com
-                        </p>
-                    </div>
-                    <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                        $67
-                    </div>
-                </div>
-            </li>
-            <li class="py-3 sm:py-4">
-                <div class="flex items-center space-x-4">
-                    <div class="flex-shrink-0">
-                        <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-4.jpg" alt="Lana image">
-                    </div>
-                    <div class="flex-1 min-w-0">
-                        <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                            Lana Byrd
-                        </p>
-                        <p class="text-sm text-gray-500 truncate dark:text-gray-400">
-                            email@windster.com
-                        </p>
-                    </div>
-                    <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                        $367
-                    </div>
-                </div>
-            </li>
-            <li class="pt-3 pb-0 sm:pt-4">
-                <div class="flex items-center space-x-4">
-                    <div class="flex-shrink-0">
-                        <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="Thomas image">
-                    </div>
-                    <div class="flex-1 min-w-0">
-                        <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                            Thomes Lean
-                        </p>
-                        <p class="text-sm text-gray-500 truncate dark:text-gray-400">
-                            email@windster.com
-                        </p>
-                    </div>
-                    <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                        $2367
-                    </div>
-                </div>
-            </li>
-        </ul>
-   </div>
+                </td>
+                <td class="px-6 py-4">
+                    {{ $contact->Date_de_naissance }}
+                </td>
+
+            </tr>
+
+        </tbody>
+    </table>
+
 </div>
+
+<div class="mt-2">
+
+    {{ $contacts->links() }}
+</div>
+@endforeach

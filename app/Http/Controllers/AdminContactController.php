@@ -13,6 +13,7 @@ class AdminContactController extends Controller
      */
     public function index()
     {
+
         $contacts = Contact::all();
         return view('admin_contact.index', compact('contacts'));
     }
@@ -103,6 +104,7 @@ class AdminContactController extends Controller
 
     }
 }
+
 
 
 

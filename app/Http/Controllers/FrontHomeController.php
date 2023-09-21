@@ -12,9 +12,9 @@ class FrontHomeController extends Controller
      */
     public function index()
     {
-        $contacts = Contact::all();
+        $contacts = Contact::SimplePaginate(1);
         return view('home', compact('contacts'));
-      
+
     }
 
     public function showContact(string $id)
