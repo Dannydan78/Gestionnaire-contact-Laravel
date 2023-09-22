@@ -2,7 +2,10 @@
 
 use App\Http\Controllers\AdminContactController;
 use App\Http\Controllers\AdminHomeController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\FrontContactController;
 use App\Http\Controllers\FrontHomeController;
+use App\Http\Controllers\RegistrationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,6 +23,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', FrontHomeController::class . '@index')->name('home.index');
 
 Route::get('contact/{id}', [FrontHomeController::class, 'showContact'])->name('front.contact.show');
+
+Route::get('/login', [AuthController::class, 'login'])->name('auth.login');
+
+Route::delete('/logout', [AuthController::class, 'logout'])->name('auth.logout');
+
+Route::post('/login', [AuthController::class, 'dologin'])->name('auth.login');
+
+Route::get('/signin', [RegistrationController::class, 'signin'])->name('signin');
+
+Route::get('/contacts', [FrontContactController::class, 'index'])->name('front.contacts');
 
 
 // Route::get('home/show/{id}', AdminContactController::class . '@show')->name('home.show');

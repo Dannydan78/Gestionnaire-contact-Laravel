@@ -34,15 +34,15 @@
                         <div class="font-normal text-gray-500">{{ $contact->Email}}</div>
                     </div>
                 </th>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 text-white">
                     {{ $contact->Adresse_Postale }}
                 </td>
                 <td class="px-6 py-4">
-                    <div class="flex items-center">
+                    <div class="flex items-center text-white">
                         {{ $contact->Numero_de_telephone }}
                     </div>
                 </td>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 text-white">
                     {{ $contact->Date_de_naissance }}
                 </td>
 

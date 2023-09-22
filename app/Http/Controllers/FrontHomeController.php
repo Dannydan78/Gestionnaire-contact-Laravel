@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use App\Models\User;
 
 class FrontHomeController extends Controller
 {
@@ -12,6 +14,13 @@ class FrontHomeController extends Controller
      */
     public function index()
     {
+
+        // User::create([
+        //     'name' => 'Danny',
+        //     'email' => 'Dannydan@gmail.fr',
+        //     'password' => Hash::make('test1'),
+        // ]);
+
         $contacts = Contact::SimplePaginate(1);
         return view('home', compact('contacts'));
 
