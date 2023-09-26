@@ -23,11 +23,12 @@
         </div>
         <div class="w-4/5 p-4">
             <h1 class="text-center text-4xl mt-3 font-semibold">Espace Administrateur</h1>
-            
-            <div class="main container text-center mt-9 card"></div>
-            <img src="{{ asset('images/business-dashboard-example.png')}}" alt="">
+
+            <div class="flex items-center justify-center mt-5">
+
+                <img src="" alt="">
+            </div>
         </div>
     </div>
 </body>
-
 </html>

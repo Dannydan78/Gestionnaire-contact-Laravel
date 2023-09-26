@@ -32,7 +32,11 @@
             </div>
 <div>
 
-
+    @if (session('success'))
+    <span class="alert alert-success">
+        {{ session('success') }}
+    </span>
+@endif
 
 </div>
             <div class="flex items-center justify-center mt-4">
@@ -119,7 +123,6 @@
         </div>
     </div>
 </body>
-
 
 
 

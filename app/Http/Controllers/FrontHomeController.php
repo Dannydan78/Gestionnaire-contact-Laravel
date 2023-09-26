@@ -16,9 +16,9 @@ class FrontHomeController extends Controller
     {
 
         // User::create([
-        //     'name' => 'Danny',
-        //     'email' => 'Dannydan@gmail.fr',
-        //     'password' => Hash::make('test1'),
+        //     'name' => 'Redha',
+        //     'email' => 'red@gmail.com',
+        //     'password' => 'test1',
         // ]);
 
         $contacts = Contact::SimplePaginate(1);

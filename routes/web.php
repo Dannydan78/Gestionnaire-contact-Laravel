@@ -7,6 +7,8 @@ use App\Http\Controllers\FrontContactController;
 use App\Http\Controllers\FrontHomeController;
 use App\Http\Controllers\RegistrationController;
 use Illuminate\Support\Facades\Route;
+use App\Livewire\SearchBar;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +28,7 @@ Route::get('contact/{id}', [FrontHomeController::class, 'showContact'])->name('f
 
 Route::get('/login', [AuthController::class, 'login'])->name('auth.login');
 
-Route::delete('/logout', [AuthController::class, 'logout'])->name('auth.logout');
+Route::get('/logout', [AuthController::class, 'logout'])->name('auth.logout');
 
 Route::post('/login', [AuthController::class, 'dologin'])->name('auth.login');
 
@@ -34,11 +36,22 @@ Route::get('/signin', [RegistrationController::class, 'signin'])->name('signin')
 
 Route::get('/contacts', [FrontContactController::class, 'index'])->name('front.contacts');
 
+Route::delete('/contact/{id}', [FrontContactController::class, 'destroy'])->name('front.contact.destroy');
 
-// Route::get('home/show/{id}', AdminContactController::class . '@show')->name('home.show');
+Route::get('/contact/edit/{id}', [FrontContactController::class, 'edit'])->name('contact.edit');
+
+Route::post('/contact', [FrontContactController::class,'store'])->name('contact.store');
+
+// Route::get('/contact/create', [FrontContactController::class, 'create'])->name('contact.create');
+
+
+
+
 
 
 //================================== Admin =============================================//
+
+
 Route::get('admin/', AdminHomeController::class . '@index')->name('admin.index');
 
 

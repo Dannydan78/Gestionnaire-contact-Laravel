@@ -24,7 +24,7 @@
         <div class="w-4/5 p-4">
             <h1 class="text-center text-3xl mt-3">Espace Administrateur</h1>
             <div class="main container text-center mt-9 card"></div>
-            <img src="{{ asset('images/business-dashboard-example.png')}}" alt="">
+            <img src="{{ asset('images/dashboard.webp')}}" alt="">
         </div>
     </div>
 </body>
