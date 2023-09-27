@@ -8,26 +8,26 @@ use App\Models\Contact;
 class SearchBar extends Component
 {
 
-    public string $query = '';
-    public $contacts = [];
+   public string $search = ''; // est utilisée pour stocker la valeur de la recherche entrée par l'utilisateur
 
-    public function updatedQuery()
-    {
-        $words = '%' . $this->query . '%';
-
-        if (strlen($this->query) > 2) {
-            $this->contacts = Contact::where('Nom', 'like', $words)
-
-            ->orWhere('Prenom', 'like', $words)
-            ->get();
-        }
-        dd($this->contacts);
-
-        }
+   protected $queryString = ['search']; //Permet de synchronise la propriété search avec l'URL
 
 
     public function render()
     {
-        return view('livewire.search-bar');
+
+        return view('livewire.search-bar', [
+            'contacts' => Contact::where(function ($query) {
+                $query->where('Nom',  'like' , '%' . $this->search . '%')
+                    ->orWhere('Prenom', 'like', '%' . $this->search . '%');
+            })->get(),
+        ]);
+
     }
+
+
+
+
+
 }
+

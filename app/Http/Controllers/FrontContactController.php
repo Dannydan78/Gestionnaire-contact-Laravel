@@ -25,21 +25,15 @@ class FrontContactController extends Controller
 
     public function edit(int $id)
     {
-         $contact = Contact::find($id);
-         return view('front-edit', compact('contact'));
-
+        $contact = Contact::find($id);
+        return view('front-edit', compact('contact'));
     }
 
-    public function create()
-    {
-        return view('contact.create');
-
-    }
 
     public function store(Request $request)
     {
 
-            $validated = Validator::make($request->all(),[
+        $validated = Validator::make($request->all(), [
             'Nom' => 'required',
             'Prenom' => 'required',
             'Adresse_postale' => 'required',
@@ -51,10 +45,17 @@ class FrontContactController extends Controller
 
 
 
-          Contact::create($validated);
-          request()->session()->flash('success','Le contact a bien été créé');
-          return redirect()->route('front.contacts');
+        Contact::create($validated);
+        request()->session()->flash('success', 'Le contact a bien été créé');
+        return redirect()->route('front.contacts');
     }
+    
+
+    public function create()
+    {
+        return view('contact-create');
+    }
+
 
     public function update(Request $request, int $id)
     {
@@ -72,4 +73,4 @@ class FrontContactController extends Controller
         request()->session()->flash('success', 'La contact a bien été modifié.');
         return redirect()->route('front.contacts');
     }
- }
+}

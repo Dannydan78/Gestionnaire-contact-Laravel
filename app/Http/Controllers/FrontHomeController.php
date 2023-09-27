@@ -29,7 +29,6 @@ class FrontHomeController extends Controller
     public function showContact(string $id)
     {
 
-        // dd($id);
         $contact = Contact::find($id);
 
         if (!$contact) {
@@ -52,7 +51,7 @@ class FrontHomeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**

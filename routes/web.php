@@ -24,7 +24,7 @@ use App\Livewire\SearchBar;
 
 Route::get('/', FrontHomeController::class . '@index')->name('home.index');
 
-Route::get('contact/{id}', [FrontHomeController::class, 'showContact'])->name('front.contact.show');
+// Route::get('contact/{id}', [FrontHomeController::class, 'showContact'])->name('front.contact.show');
 
 Route::get('/login', [AuthController::class, 'login'])->name('auth.login');
 
@@ -42,7 +42,8 @@ Route::get('/contact/edit/{id}', [FrontContactController::class, 'edit'])->name(
 
 Route::post('/contact', [FrontContactController::class,'store'])->name('contact.store');
 
-// Route::get('/contact/create', [FrontContactController::class, 'create'])->name('contact.create');
+Route::get('/contact/create', [FrontContactController::class, 'create'])->name('contact.create');
+
 
 
 
