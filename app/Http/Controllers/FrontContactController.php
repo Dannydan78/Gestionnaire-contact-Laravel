@@ -14,20 +14,6 @@ class FrontContactController extends Controller
         return view('front-contact', compact('contacts'));
     }
 
-    public function destroy(int $id)
-    {
-        $contact = Contact::find($id);
-
-        $contact->delete();
-        request()->session()->flash('success', 'Le contact a bien été supprimé');
-        return redirect()->route('front.contacts');
-    }
-
-    public function edit(int $id)
-    {
-        $contact = Contact::find($id);
-        return view('front-edit', compact('contact'));
-    }
 
 
     public function store(Request $request)
@@ -41,25 +27,21 @@ class FrontContactController extends Controller
             'Numero_de_telephone' => 'required',
             'Date_de_naissance' => 'required',
 
-        ])->validate();
+            ])->validate();
 
 
+        
 
-        Contact::create($validated);
-        request()->session()->flash('success', 'Le contact a bien été créé');
-        return redirect()->route('front.contacts');
+            Contact::create($validated);
+            request()->session()->flash('success', 'Le contact a bien été créé');
+            return redirect()->route('front.contacts');
     }
-    
-
-    public function create()
-    {
-        return view('contact-create');
-    }
-
 
     public function update(Request $request, int $id)
+
     {
-        $request->validate([
+
+            $request->validate([
             'Nom' => 'required',
             'Prenom' => 'required',
             'Adresse_postale' => 'required',
@@ -68,9 +50,39 @@ class FrontContactController extends Controller
             'Date_de_naissance' => 'required',
         ]);
         $contact = Contact::find($id);
-        dd($request->all());
         $contact->update($request->all());
+        // dd($request);
+
         request()->session()->flash('success', 'La contact a bien été modifié.');
         return redirect()->route('front.contacts');
     }
+
+
+    public function destroy(int $id)
+
+    {
+        $contact = Contact::find($id);
+
+        $contact->delete();
+        request()->session()->flash('success', 'Le contact a bien été supprimé');
+        return redirect()->route('front.contacts');
+    }
+
+    public function create()
+
+    {
+        return view('contact-create');
+    }
+
+    public function edit(int $id)
+
+    {
+        $contact = Contact::find($id);
+        return view('front-edit', compact('contact'));
+    }
+
+
+
+
+
 }

@@ -49,57 +49,57 @@
                         <div class="row h-100 justify-content-center align-items-center">
                             <div class="col-10 col-md-8 col-lg-6">
 
-                                <form action="{{ route('admin.update', ['id' => $contact->id]) }}" method="POST">
+                                <form action="{{ route('admin.update', $contact->id]) }}" method="POST">
                                     @csrf
                                     @method('PUT')
 
                                     <div class="form-group w-80">
 
-                                        <label for="nom" class="mt-2 block mb-2 text-sm font-medium text-gray-900 dark:text-dark">
+                                        <label for="nom" class="mt-2 block mb-2 text-sm font-medium text-gray-900">
                                             Nom</label>
-                                            <input type="text" id="Prenom" value="{{ $contact->Nom }}"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-00 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                            <input type="text" id="Nom" value="{{ $contact->Nom }}"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                                 name="Prenom" placeholder="" required>
 
-                                        <label for="prenom" class="mt-2 block mb-2 text-sm font-medium text-gray-900 dark:text-dark">
+                                        <label for="Prenom" class="mt-2 block mb-2 text-sm font-medium text-gray-900">
                                             Prénom</label>
                                             <input type="text" id="Prenom" value="{{ $contact->Prenom}}"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-00 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                                 name="Prenom" placeholder="" required>
 
                                             <label for="adresse_Postale"
-                                                class="mt-2 block mb-2 text-sm font-medium text-gray-900 dark:text-dark">Adresse</label>
+                                                class="mt-2 block mb-2 text-sm font-medium text-gray-900">Adresse</label>
                                             <input type="text" id="Adresse Postale" value="{{ $contact->Adresse_Postale}}"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-00 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                                 name="Adresse_postale" placeholder="" required>
 
                                             <label for="email"
-                                                class="mt-2 block mb-2 text-sm font-medium text-gray-900 dark:text-dark">Email</label>
+                                                class="mt-2 block mb-2 text-sm font-medium text-gray-900">Email</label>
                                             <input type="email" id="email" value="{{ $contact->Email }}"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-00 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                                 name="Email" placeholder="" required>
 
                                             <label for="numero_de_telephone"
-                                                class="mt-2 block mb-2 text-sm font-medium text-gray-900 dark:text-dark">Numéro de
+                                                class="mt-2 block mb-2 text-sm font-medium text-gray-900">Numéro de
                                                 téléphone</label>
                                             <input type="tel" id="Numero de telephone" value="{{ $contact->Numero_de_telephone}}"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-00 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                                 name="Numero_de_telephone" placeholder="" required>
 
                                             <label for="date_de_naissance"
-                                                class="mt-2 block mb-2 text-sm font-medium text-gray-900 dark:text-dark">Date de
+                                                class="mt-2 block mb-2 text-sm font-medium text-gray-900">Date de
                                                 naissance</label>
                                             <input type="date" id="Date de naissance" value="{{ $contact->Date_de_naissance}}"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-00 dark:text-dark dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                                 name="Date_de_naissance" placeholder="" required>
 
                                             <button type="submit"
-                                                class="mt-5 focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Enregistrer</button>
+                                                class="mt-5 focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">Enregistrer</button>
 
                                                 <div class="text-center mt-4">
                                                     <button>
                                                         <a href="{{ route('admin.contact.index') }}"
-                                                              class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Retour
+                                                              class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200">Retour
                                                               à la liste</a>
                                                     </button>
                                                 </div>

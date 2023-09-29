@@ -13,42 +13,65 @@
     @include('front-navbar')
 
 
-    <h1 class="mb-4 mt-5 ms-3 text-3xl font-extrabold text-gray-900 dark:text-gray-300 md:text-5xl lg:text-6xl"><span
-        class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Ajouter un contact
+    <h1 class="mb-4 mt-5 ms-3 text-3xl font-extrabold text-gray-900 md:text-5xl lg:text-6xl"><span
+        class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Ajouter un contact :
     </span></h1>
 
 
-    <div class="container mx-auto">
+    <div class="container mx-auto border-2 mt-10 justify-center rounded shadow">
 
-<form class="mt-10" action="{{ route('contact.store') }}" method="POST">
 
-    <div class="grid md:grid-cols-2 md:gap-6">
-        <div class="relative z-0 w-full mb-6 group">
-            <input type="text" name="Nom" id="Nom" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-            <label for="Nom" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Nom</label>
-        </div>
-        <div class="relative z-0 w-full mb-6 group">
-            <input type="text" name="Prenom" id="Prenom" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-            <label for="Prenom" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Prénom</label>
-        </div>
-    </div>
-    <div class="grid md:grid-cols-2 md:gap-6">
-        <div class="relative z-0 w-full mb-6 group">
-            <input type="tel" name="Numero_de_telephone" id="Numero de telephone" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-            <label for="Numero de telephone" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Numero de telephone</label>
-        </div>
-        <div class="relative z-0 w-full mb-6 group">
-            <input type="tel" name="Adresse_postale" id="Adresse_postale" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-            <label for="Adresse_postale" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Adresse</label>
-        </div>
-    </div>
-    <div class="relative z-0 w-full mb-6 group">
-        <input type="email" name="Email" id="Email" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-        <label for="Email" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email </label>
-    </div>
-    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Enregistrer</button>
-  </form>
 
-    </div>
+
+    <form action="{{ route('contact.store') }}" class="mt-5 justify-center p-10"  method="POST">
+        @csrf
+
+        <div class="mb-6">
+            <label for="Nom" class="block mb-2 text-sm font-medium text-gray-900 text-1xl">Nom :</label>
+            <input type="text" id="Nom" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required name="Nom" value="{{ old('Nom') }}">
+            @error('Nom') <div class="text-red-500">{{ $message }}</div>
+            @enderror
+        </div>
+        <div class="mb-6">
+            <label for="Prenom" class="block mb-2 text-sm font-medium text-gray-900 text-1xl">Prénom :</label>
+            <input type="text" id="Prenom" name="Prenom" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " required value="{{ old('Prenom') }}">
+            @error('Prenom') <div class="text-red-500">{{ $message }}</div>
+            @enderror
+        </div>
+        <div class="mb-6">
+            <label for="Telephone" class="block mb-2 text-sm font-medium text-gray-900 text-1xl">Telephone :</label>
+            <input type="Tel" id="Telephone" name="Telephone" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required value="{{ old ('Telephone')}}">
+            @error('Telephone') <div class="text-red-500">{{ $message }}</div>
+            @enderror
+        </div>
+        <div class="mb-6">
+          <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Email :</label>
+          <input type="email" id="email" name="Email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  " required value="{{ old('Email')}}">
+          @error('Email') <div class="text-red-500">{{ $message }}</div>
+          @enderror
+        </div>
+        <div class="mb-6">
+            <label for="Adresse_postale" class="block mb-2 text-sm font-medium text-gray-900 text-1xl">Adresse :</label>
+            <input type="text" id="Adresse_postale" name="Adresse_postale" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required value="{{ old('Adresse_postale')}}">
+            @error('Adresse_postale') <div class="text-red-500">{{ $message }}</div>
+            @enderror
+        </div>
+        <div class="mb-6">
+            <label for="Date_de_naissance" class="block mb-2 text-sm font-medium text-gray-900 text-1xl">Date de naissance :</label>
+            <input type="Date" id="Date_de_naissance" name="Date_de_naissance" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required value="{{ old('Date_de_naissance')}}">
+              @error('Date_de_naissance') <div class="text-red-500">{{ $message }}</div>
+              @enderror
+        </div>
+
+
+
+
+
+
+        <button type="submit" class="mt-3 mb-5 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Enregistrer</button>
+      </form>
+
+
+
 </body>
 </html>

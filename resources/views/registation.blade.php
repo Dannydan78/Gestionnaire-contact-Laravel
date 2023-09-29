@@ -24,19 +24,13 @@
                 @csrf
 
                 <div class="relative m-20">
-                    <label for="nom" class="block text-gray-700">Nom :</label>
+                    <label for="name" class="block text-gray-700">Nom :</label>
                     <input type="text"
                         class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-blue-500 placeholder-gray-350 italic"
-                        id="nom" name="nom" value="" placeholder="Dan">
+                        id="name" name="name" value="" placeholder="Dan">
 
                 </div>
-                <div class="relative m-20">
-                    <label for="prenom" class="block text-gray-700">Prénom :</label>
-                    <input type="text"
-                        class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-blue-500 placeholder-gray-350 italic"
-                        id="prenom" name="prenom" value="" placeholder="Danny">
 
-                </div>
 
 
                 <div class="relative m-20">
@@ -44,38 +38,6 @@
                     <input type="email"
                         class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-blue-500 placeholder-gray-350 italic"
                         id="email" name="email" value="" placeholder="Dannydany@gmail.fr">
-
-
-
-                </div>
-
-
-                <div class="relative m-20">
-                    <label for="adresse" class="block text-gray-700">Adresse :</label>
-                    <input type="text"
-                        class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-blue-500 placeholder-gray-350 italic"
-                        id="adresse" name="adresse" value="" placeholder="16 rue l'eveque 75008 Paris">
-
-
-
-                </div>
-
-
-                <div class="relative m-20">
-                    <label for="telephone" class="block text-gray-700">Telephone :</label>
-                    <input type="text"
-                        class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-blue-500 placeholder-gray-350 italic"
-                        id="telephone" name="telephone" value="" placeholder="0612586332">
-
-
-
-                </div>
-
-                <div class="relative m-20">
-                    <label for="date de naissance" class="block text-gray-700">Date de naissance :</label>
-                    <input type="text"
-                        class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-blue-500 placeholder-gray-350 italic"
-                        id="date de naissance" name="date de naissance" value="" placeholder="16 rue l'eveque 75008 Paris">
 
 
 
@@ -101,6 +63,7 @@
 
     <footer class="bg-gray-900 text-white p-4 bottom-0 w-full fixed">
         @include('front-footer')
+    
     </footer>
 </body>
 

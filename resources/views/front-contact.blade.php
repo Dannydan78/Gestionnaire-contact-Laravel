@@ -21,8 +21,8 @@
 
 
         </div>
-    
-    <h1 class="mb-4 mt-5 ms-3 text-3xl font-extrabold text-gray-900 dark:text-gray-300 md:text-5xl lg:text-6xl"><span
+
+    <h1 class="mb-4 mt-5 ms-3 text-3xl font-extrabold text-gray-900 md:text-5xl lg:text-6xl"><span
             class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Tout vos contacts :
         </span></h1>
 
@@ -34,7 +34,7 @@
 
     <div class="ml-5">
 
-        <a href="{{ route('contact.create') }}" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Ajouter un contact</a>
+        <a href="{{ route('contact.create') }}" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Ajouter un contact</a>
 
     </div>
 
@@ -43,6 +43,7 @@
         @livewire('search-bar')
 
     </div>
+
 
 
 

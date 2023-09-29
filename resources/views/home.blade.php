@@ -838,7 +838,7 @@
 
 <body class="flex flex-col min-h-screen">
     @include('front-navbar')
- 
+
     <div class="flex-grow">
         <div class="flex justify-center mt-20">
 
@@ -851,14 +851,14 @@
             <div class="container mx-2">
 
 
-                <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-gray-300 md:text-5xl lg:text-6xl"><span
+                <h1 class="mb-4 text-3xl font-extrabold text-gray-900 md:text-5xl lg:text-6xl"><span
                         class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">#Pour gerez
                         vos contatcts</span> Facilement.</h1>
-                <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Lorem ipsum dolor sit amet
+                <p class="text-lg font-normal text-gray-500 lg:text-xl">Lorem ipsum dolor sit amet
                     consectetur adipisicing elit. Dolore, magnam dolorem. Voluptate quasi eos similique laborum tenetur
                     enim voluptatibus ullam nostrum totam consequuntur incidunt, ipsa magnam unde consequatur sint
                     debitis.</p>
-                <p class="mt-2 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis qui voluptas porro iusto dolores
+                <p class="mt-2 text-lg font-normal text-gray-500 lg:text-xl">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis qui voluptas porro iusto dolores
                     error, nam tempore natus optio nisi quia architecto blanditiis explicabo? Natus ratione recusandae
                     praesentium iste doloribus?Aut incidunt mollitia quia est explicabo animi nemo officiis. Error totam
                     harum sint! Possimus hic accusantium mollitia esse perferendis quaerat rerum temporibus cum aliquid,
@@ -873,6 +873,10 @@
                 </div>
             </div>
         </div>
+
+
+
+
 
 
 

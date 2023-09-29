@@ -7,7 +7,7 @@ use App\Http\Controllers\FrontContactController;
 use App\Http\Controllers\FrontHomeController;
 use App\Http\Controllers\RegistrationController;
 use Illuminate\Support\Facades\Route;
-use App\Livewire\SearchBar;
+
 
 
 /*
@@ -34,18 +34,17 @@ Route::post('/login', [AuthController::class, 'dologin'])->name('auth.login');
 
 Route::get('/signin', [RegistrationController::class, 'signin'])->name('signin');
 
-Route::get('/contacts', [FrontContactController::class, 'index'])->name('front.contacts');
+Route::get('/contact', [FrontContactController::class, 'index'])->name('front.contacts');
 
 Route::delete('/contact/{id}', [FrontContactController::class, 'destroy'])->name('front.contact.destroy');
 
 Route::get('/contact/edit/{id}', [FrontContactController::class, 'edit'])->name('contact.edit');
 
-Route::post('/contact', [FrontContactController::class,'store'])->name('contact.store');
+Route::post('/contact', [FrontContactController::class, 'store'])->name('contact.store');
 
 Route::get('/contact/create', [FrontContactController::class, 'create'])->name('contact.create');
 
-
-
+Route::put('/contact/{id}', [FrontContactController::class, 'update'])->name('contact.update');
 
 
 

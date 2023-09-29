@@ -73,7 +73,7 @@ class AdminContactController extends Controller
             'Date_de_naissance' => 'required',
         ]);
         $contact = Contact::find($id);
-        dd($request->all());
+
         $contact->update($request->all());
         return redirect()->route('admin.contact.index')
         ->with('success', 'La contact a bien été modifié.');
@@ -85,7 +85,7 @@ class AdminContactController extends Controller
     public function destroy(int $id)
     {
         $contact = Contact::find($id);
-        // dd($contact);
+        
         $contact->delete();
         return redirect()->route('admin.contact.index')
           ->with('success', 'Le contact a bien été supprimé');
